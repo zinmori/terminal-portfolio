@@ -1,0 +1,8 @@
+:root {
+    --size: 1.2;
+}
+
+.command,
+.directory {
+    cursor: pointer;
+}
