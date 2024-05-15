@@ -39,10 +39,10 @@ const commands = {
       .echo('<img src="profil.png"/>')
       .echo("")
       .echo(
-        `<font size="1.5"><glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎), 
+        `<glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎), 
 a software developer and passionate about data scientist and machine
 learning based in Togo. I love building software and learning new things. 
-Feel free to explore my portfolio and projects.</white></glow></font>`,
+Feel free to explore my portfolio and projects.</white></glow>`,
         {
           delay: 20,
           typing: true,
@@ -240,7 +240,7 @@ function ready() {
       ansi: true,
     })
     .echo(
-      '<glow><font size="2"><green>Software Developer & Data Science enthousiast</green></font></glow>'
+      "<glow><green>Software Developer & Data Science enthousiast</green></glow>"
     )
     .echo(
       "<green>\nWelcome to my Terminal Portfolio. Type help to get started.\n</green>"
