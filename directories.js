@@ -3,8 +3,8 @@ export const directories = {
     "",
     "<white>Education</white>",
 
-    '* <a href="https://univ-lome.tg/">Université de Lomé</a> Ecole Polythechnique de Lomé <yellow>"Software Engeneering"</yellow> 2021-2024',
-    "* Lycée Scientifique de Lomé - <yellow>Bac C4</yellow> 2018-2021",
+    '* <a href="https://univ-lome.tg/">Université de Lomé</a> - Ecole Polythechnique de Lomé <yellow>"Software Engeneering"</yellow> 2021-2024',
+    "* Lycée Scientifique de Lomé - <yellow>Baccalauréat C4</yellow> 2018-2021",
     "",
   ],
   certifications: [

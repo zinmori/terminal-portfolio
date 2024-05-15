@@ -10,12 +10,11 @@ const fonts = [
   "Standard",
   "Sub-Zero",
   "Sweet",
-  "tmplr",
   "Varsity",
   "ANSI Shadow",
 ];
 const url = "https://v2.jokeapi.dev/joke/Programming";
-const font = fonts[rand(11)];
+const font = fonts[rand(10)];
 figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
 figlet.preloadFonts([font], ready);
 
@@ -36,16 +35,19 @@ function prompt() {
 
 const commands = {
   about() {
-    term.echo(
-      `Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎), 
-a software developer and data scientist based in Togo.
-I love building software and learning new things. 
-Feel free to explore my portfolio and projects.`,
-      {
-        delay: 20,
-        typing: true,
-      }
-    );
+    term
+      .echo('<img src="profil.png"/>')
+      .echo("")
+      .echo(
+        `<font size="1.5"><glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎), 
+a software developer and passionate about data scientist and machine
+learning based in Togo. I love building software and learning new things. 
+Feel free to explore my portfolio and projects.</white></glow></font>`,
+        {
+          delay: 20,
+          typing: true,
+        }
+      );
   },
   contact() {
     term.echo(
@@ -55,7 +57,19 @@ Feel free to explore my portfolio and projects.`,
     );
   },
   help() {
-    term.echo(`List of available commands : ${help}`);
+    term.echo(`
+      List of available commands :
+      <span class="command"><white>about</white></span> : Display information about me
+      <span class="command"><white>contact</span> : Display my contacts
+      <span class="command"><white>echo</span> args : Display something (args) on the screen
+      <span class="command"><white>cd</span> dir : Change directory to 'dir'
+      <span class="command"><white>ls</span> dir : List the content of directory 'dir'
+      <span class="command"><white>joke</span> : Display a random joke
+      <span class="command"><white>clear</span> : Clear the screen
+      <span class="command"><white>credits</span> : Display the used libraries
+      <span class="command"><white>exit</span> : exit ? why ?
+      <span class="command"><white>help</span> : Display this help menu
+      `);
   },
   echo(...args) {
     if (args.length === 0) {
@@ -139,6 +153,11 @@ Feel free to explore my portfolio and projects.`,
       "",
     ].join("\n");
   },
+  exit() {
+    term.echo(
+      'Why do you want to leave me 😒? Try a <span class="command"><white>joke</white></sapn> to see.'
+    );
+  },
 };
 
 const command_list = ["clear"].concat(Object.keys(commands));
@@ -147,7 +166,6 @@ const formatted_list = command_list.map((cmd) => {
 });
 
 const help = formatter.format(formatted_list);
-
 function print_dirs() {
   term.echo(
     dirs
@@ -217,29 +235,15 @@ function hex(color) {
 function ready() {
   const seed = rand(256);
   term
-    .echo(() => rainbow(render("BIGZ'S PORTFOLIO"), seed), { ansi: true })
+    .css("background-color", "#131F00")
+    .echo(() => rainbow(render("Ezechiel AGBAN"), seed), {
+      ansi: true,
+    })
     .echo(
-      `<green>
-      _=====_                               _=====_
-     / _____ \\                             / _____ \\
-   +.-'_____'-.---------------------------.-'_____'-.+
-  /   |     |  '.        B I G Z        .'  |  _  |   \\
- / ___| /|\\ |___ \\                     / ___| /_\\ |___ \\
-/ |      |      | ;  __           _   ; | _         _ | ;
-| | <---   ---> | | |__|         |_:> | ||_|       (_)| |
-| |___   |   ___| ;SELECT       START ; |___       ___| ;
-|\\    | \\|/ |    /  _     ___      _   \\    | (X) |    /|
-| \\   |_____|  .','" "', |___|  ,'" "', '.  |_____|  .' |
-|  '-.______.-' /       \\ANALOG/       \\  '-._____.-'   |
-|               |       |------|       |                |
-|              /\\       /      \\       /\\               |
-|             /  '.___.'        '.___.'  \\              |
-|            /                            \\             |
- \\          /                              \\           /
-  \\________/                                \\_________/</green>`
+      '<glow><font size="2"><green>Software Developer & Data Science enthousiast</green></font></glow>'
     )
     .echo(
-      "<green>Welcome to my Terminal Portfolio. Type help toget started.\n</green>"
+      "<green>\nWelcome to my Terminal Portfolio. Type help to get started.\n</green>"
     );
 }
 
