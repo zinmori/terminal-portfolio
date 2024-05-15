@@ -1,8 +1,12 @@
 :root {
-    --size: 1.2;
+    --size: 1.3;
 }
 
 .command,
 .directory {
     cursor: pointer;
+}
+
+.job {
+    font-weight: bold;
 }

@@ -240,7 +240,7 @@ function ready() {
       ansi: true,
     })
     .echo(
-      "<glow><green>Software Developer & Data Science enthousiast</green></glow>"
+      '<glow><green><span class="job">Software Developer & Data Science enthousiast</span></green></glow>'
     )
     .echo(
       "<green>\nWelcome to my Terminal Portfolio. Type help to get started.\n</green>"
