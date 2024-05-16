@@ -3,18 +3,18 @@ export const directories = {
     "",
     "<white>Education</white>",
 
-    '* <a href="https://univ-lome.tg/">Université de Lomé</a> - Ecole Polythechnique de Lomé <yellow>"Software Engeneering"</yellow> 2021-2024',
+    '* <a href="https://univ-lome.tg/" target="_blank">Université de Lomé</a> - Ecole Polythechnique de Lomé <yellow>"Software Engeneering"</yellow> 2021-2024',
     "* Lycée Scientifique de Lomé - <yellow>Baccalauréat C4</yellow> 2018-2021",
     "",
   ],
   certifications: [
     "",
     "<white>Certifications</white>",
-    '* <a href="https://www.datacamp.com/certificate/DSA0019605927685"><yellow>Associate Data Scientist</yellow></a> - Datacamp',
-    '* <a href="https://coursera.org/verify/SF24JFHH5H5Q"><yellow>Supervised Machine Learning</yellow></a> - Coursera',
-    '* <a href="https://www.udemy.com/certificate/UC-18077573-e617-42d6-8b7a-8f2d8d70a0cf/"><yellow>Flutter et Dart</yellow></a> - Udemy',
-    '* <a href="https://openclassrooms.com/fr/course-certificates/8609343030"><yellow>React JS</yellow></a> - Openclassrooms',
-    '* <a href="https://openclassrooms.com/fr/course-certificates/4249712619"><yellow>NodeJS/Express/MongoDB</yellow></a> - Openclassrooms',
+    '* <a href="https://www.datacamp.com/certificate/DSA0019605927685" target="_blank"><yellow>Associate Data Scientist</yellow></a> - Datacamp',
+    '* <a href="https://coursera.org/verify/SF24JFHH5H5Q" target="_blank"><yellow>Supervised Machine Learning</yellow></a> - Coursera',
+    '* <a href="https://www.udemy.com/certificate/UC-18077573-e617-42d6-8b7a-8f2d8d70a0cf/" target="_blank"><yellow>Flutter et Dart</yellow></a> - Udemy',
+    '* <a href="https://openclassrooms.com/fr/course-certificates/8609343030" target="_blank"><yellow>React JS</yellow></a> - Openclassrooms',
+    '* <a href="https://openclassrooms.com/fr/course-certificates/4249712619" target="_blank"><yellow>NodeJS/Express/MongoDB</yellow></a> - Openclassrooms',
     "",
   ],
   projects: [
@@ -53,7 +53,7 @@ export const directories = {
       ],
       ["Find more on my github page", "https://github.com/zinmori/"],
     ].map(([name, url, description = ""]) => {
-      return `* <a href="${url}">${name}</a> &mdash; <white>${description}</white>`;
+      return `* <a href="${url}" target="_blank">${name}</a> &mdash; <white>${description}</white>`;
     }),
     "",
   ].flat(),
@@ -83,9 +83,9 @@ export const directories = {
   links: [
     "",
     "<white>My links</white>",
-    '* 👉<a href="https://www.linkedin.com/in/kokou-ezechiel-agban/"><blue>Linkedin</blue></a>',
-    '* 👉<a href="https://github.com/zinmori"><blue>Github</blue></a>',
-    '* 👉<a href="https://www.datacamp.com/portfolio/ezechiel9087"><blue>Datacamp</blue></a>',
+    '* 👉<a href="https://www.linkedin.com/in/kokou-ezechiel-agban/" target="_blank"><blue>Linkedin</blue></a>',
+    '* 👉<a href="https://github.com/zinmori" target="_blank"><blue>Github</blue></a>',
+    '* 👉<a href="https://www.datacamp.com/portfolio/ezechiel9087" target="_blank"><blue>Datacamp</blue></a>',
     "",
   ],
   languages: [
