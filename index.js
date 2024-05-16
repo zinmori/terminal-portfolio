@@ -1,7 +1,7 @@
 import { directories } from "./directories.js";
 
 const fonts = ["ANSI Shadow", "Doom", "Standard", "Big", "Slant"];
-const url = "https://v2.jokeapi.dev/joke/Programming";
+const url = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=explicit";
 const font = fonts[rand(4)];
 figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
 figlet.preloadFonts([font], ready);
