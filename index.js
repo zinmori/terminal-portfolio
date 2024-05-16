@@ -1,20 +1,8 @@
 import { directories } from "./directories.js";
 
-const fonts = [
-  "Fire Font-k",
-  "3D Diagonal",
-  "ANSI Shadow",
-  "Big Money-ne",
-  "Doom",
-  "Small Caps",
-  "Standard",
-  "Sub-Zero",
-  "Sweet",
-  "Varsity",
-  "ANSI Shadow",
-];
+const fonts = ["ANSI Shadow", "Doom", "Standard", "Big", "Slant"];
 const url = "https://v2.jokeapi.dev/joke/Programming";
-const font = fonts[rand(10)];
+const font = fonts[rand(4)];
 figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
 figlet.preloadFonts([font], ready);
 
