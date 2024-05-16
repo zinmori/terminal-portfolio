@@ -28,11 +28,11 @@ const commands = {
       .echo("")
       .echo(
         `<glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎). 
-I'm a software developer and passionate about data science and 
-machine learning. I love building software and learning new things. 
+I'm a software developer and passionate about data science and machine learning. 
+I love building software and learning new things. 
 Feel free to explore my portfolio and projects.</white></glow>`,
         {
-          delay: 20,
+          delay: 10,
           typing: true,
         }
       );
