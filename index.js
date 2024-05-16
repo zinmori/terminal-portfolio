@@ -39,9 +39,9 @@ const commands = {
       .echo('<img src="profil.png"/>')
       .echo("")
       .echo(
-        `<glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎), 
-a software developer and passionate about data scientist and machine
-learning based in Togo. I love building software and learning new things. 
+        `<glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎). 
+I'm a software developer and passionate about data science and 
+machine learning. I love building software and learning new things. 
 Feel free to explore my portfolio and projects.</white></glow>`,
         {
           delay: 20,
