@@ -1,15 +1,12 @@
 import { directories } from "./directories.js";
+import { rainbow } from "./utils.js";
+import { rand } from "./utils.js";
 
 const fonts = ["ANSI Shadow", "Doom", "Standard", "Big", "Slant"];
-const url = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw";
+const jokeUrl = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw";
 const font = fonts[rand(4)];
 figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
 figlet.preloadFonts([font], ready);
-
-const formatter = new Intl.ListFormat("en", {
-  style: "long",
-  type: "unit",
-});
 
 const dirs = Object.keys(directories);
 const root = "~";
@@ -50,9 +47,10 @@ Feel free to explore my portfolio and projects.</white></glow>`,
       <span class="command"><white>about</white></span> : Display information about me
       <span class="command"><white>contact</span> : Display my contacts
       <span class="command"><white>echo</span> args : Display something (args) on the screen
+      <span class="command"><white>color</span> color : Change the background color of the terminal
       <span class="command"><white>cd</span> dir : Change directory to 'dir'
       <span class="command"><white>ls</span> dir : List the content of directory 'dir'
-      <span class="command"><white>joke</span> : Display a random joke
+      <span class="command"><white>joke</span> : Tell a random joke
       <span class="command"><white>clear</span> : Clear the screen
       <span class="command"><white>credits</span> : Display the used libraries
       <span class="command"><white>exit</span> : exit ? why ?
@@ -67,7 +65,7 @@ Feel free to explore my portfolio and projects.</white></glow>`,
     term.echo(args.join(" "));
   },
   async joke() {
-    const res = await fetch(url);
+    const res = await fetch(jokeUrl);
     const data = await res.json();
     (async () => {
       if (data.type == "twopart") {
@@ -130,6 +128,26 @@ Feel free to explore my portfolio and projects.</white></glow>`,
       this.echo(directories[dir].join("\n"));
     }
   },
+  color(color) {
+    switch (color) {
+      case "black":
+        term.css("background-color", "#000000");
+        break;
+      case "green":
+        term.css("background-color", "#071200");
+        break;
+      case "blue":
+        term.css("background-color", "#00001C");
+        break;
+      case "ubuntu":
+        term.css("background-color", "#140303");
+        break;
+      default:
+        term.echo(`Invalid color
+Available colors: black, green, blue, ubuntu.`);
+        break;
+    }
+  },
   credits() {
     return [
       "",
@@ -149,11 +167,7 @@ Feel free to explore my portfolio and projects.</white></glow>`,
 };
 
 const command_list = ["clear"].concat(Object.keys(commands));
-const formatted_list = command_list.map((cmd) => {
-  return `<white class="command">${cmd}</white>`;
-});
 
-const help = formatter.format(formatted_list);
 function print_dirs() {
   term.echo(
     dirs
@@ -183,10 +197,6 @@ const term = $("body").terminal(commands, {
   prompt,
 });
 
-function rand(max) {
-  return Math.floor(Math.random() * (max + 1));
-}
-
 function render(text) {
   const cols = term.cols();
   return figlet.textSync(text, {
@@ -196,34 +206,10 @@ function render(text) {
   });
 }
 
-function rainbow(string, seed) {
-  return lolcat
-    .rainbow(
-      function (char, color) {
-        char = $.terminal.escape_brackets(char);
-        return `[[;${hex(color)};]${char}]`;
-      },
-      string,
-      seed
-    )
-    .join("\n");
-}
-
-function hex(color) {
-  return (
-    "#" +
-    [color.red, color.green, color.blue]
-      .map((n) => {
-        return n.toString(16).padStart(2, "0");
-      })
-      .join("")
-  );
-}
-
 function ready() {
   const seed = rand(256);
   term
-    .css("background-color", "#131F00")
+    .css("background-color", "#00001C")
     .echo(() => rainbow(render("Ezechiel AGBAN"), seed), {
       ansi: true,
     })

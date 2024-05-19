@@ -20,7 +20,7 @@ export const directories = {
   ],
   projects: [
     "",
-    "<white>Projects</white>",
+    "<white>My Projects\n</white>",
     [
       [
         "MuZic",
@@ -33,6 +33,16 @@ export const directories = {
         "A simple calculator with Flutter",
       ],
       [
+        "Expense Tracker",
+        "https://github.com/zinmori/meals",
+        "Track your daily expenses with this app.",
+      ],
+      [
+        "Meals",
+        "https://github.com/zinmori/expense-tracker",
+        "Discover diverse recipes with step-by-step instructions for all tastes in this app.",
+      ],
+      [
         "Tic Tac Toe",
         "https://tic-tac-toe-bigz.vercel.app/",
         "A simple Tic Tac Toe game with React.js",
@@ -43,19 +53,30 @@ export const directories = {
         "A food delivery app with React.js",
       ],
       [
+        "Investment Calculator",
+        "https://investmentz.vercel.app/",
+        "An investment Calculator app with React.js",
+      ],
+      [
         "Credit Card Approvals",
-        "https://github.com/zinmori/creditCardApprovals",
+        "https://www.datacamp.com/datalab/w/d42d9ccb-b97d-4fcb-a802-556f23ab3959/edit",
         "A machine learning model to predict credit card approvals",
       ],
       [
         "CO2 Emissions in Africa",
-        "https://github.com/zinmori/co2Africa",
+        "https://www.datacamp.com/datalab/w/3fa278e9-7c61-4134-a1c9-c3604a9b87f0/edit",
         "Study of CO2 emissions in Africa with and prediction of future emissions with machine learning models",
       ],
-      ["Find more on my github page", "https://github.com/zinmori/"],
+      [
+        "The Android app market on Google play",
+        "https://www.datacamp.com/datalab/w/e7057801-47eb-4ca8-b549-916dd6740ae3/edit",
+        "Analysis of the Android app market on Google play",
+      ],
     ].map(([name, url, description = ""]) => {
-      return `* <a href="${url}" target="_blank">${name}</a> &mdash; <white>${description}</white>`;
+      return `* <a href="${url}" target="_blank">${name}</a> &mdash; <white>${description}</white>\n`;
     }),
+    "",
+    '<white>Find more on my</white> <a href="https://github.com/zinmori/">github page</a> and <a href="https://www.datacamp.com/portfolio/ezechiel9087?view=true">Datacamp portfolio</a>',
     "",
   ].flat(),
   skills: [
@@ -66,19 +87,24 @@ export const directories = {
       (lang) => `* <yellow>${lang}</yellow>`
     ),
     "",
+    "<white>Databases</white>",
+
+    ["MySQL", "PostgreSQL", "MongoDB", "Firestore"].map(
+      (lang) => `* <magenta>${lang}</magenta>`
+    ),
+    "",
     "<white>Frameworks and Libraries</white>",
     [
       "Flutter",
       "React.js",
       "Redux",
-      "Jest",
       "Express",
       "Tensorflow/Keras",
       "Scikit-learn",
     ].map((lib) => `* <green>${lib}</green>`),
     "",
     "<white>Tools</white>",
-    ["Git", "GNU/Linux"].map((lib) => `* <blue>${lib}</blue>`),
+    ["Git", "Visual Studio Code"].map((lib) => `* <blue>${lib}</blue>`),
     "",
   ].flat(),
   links: [
