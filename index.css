@@ -1,15 +1,28 @@
-@media screen and (min-width: 600px) {
+:root {
+    --size: 1.2;
+}
+
+.job {
+    --size: 2;
+
+}
+
+@media (max-width: 768px) {
     :root {
-        --size: 1.2
+        --size: 1.2;
     }
 
     .job {
-        --size: 2;
+        --size: 1.5;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 480px) {
     :root {
+        --size: 0.8;
+    }
+
+    .job {
         --size: 0.8;
     }
 }
