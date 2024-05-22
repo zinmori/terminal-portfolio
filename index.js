@@ -24,7 +24,7 @@ const commands = {
       .echo('<img src="profil.png"/>')
       .echo("")
       .echo(
-        `<glow><white>Hi, I'm Ezechiel AGBAN (but you can call me BigZ😎). 
+        `<glow><white>Hi, I'm Ezechiel Kokou AGBAN (but you can call me BigZ😎). 
 I'm a software developer and passionate about data science and machine learning. 
 I love building software and learning new things. 
 Feel free to explore my portfolio and projects.</white></glow>`,
@@ -48,14 +48,16 @@ Feel free to explore my portfolio and projects.</white></glow>`,
       <span class="command"><white>contact</span> : Display my contacts
       <span class="command"><white>echo</span> args : Display something (args) on the screen
       <span class="command"><white>color</span> color : Change the background color of the terminal
-      <span class="command"><white>cd</span> dir : Change directory to 'dir'
-      <span class="command"><white>ls</span> dir : List the content of directory 'dir'
+      <span class="command"><white>cd</span> dir : Change directory to 'dir' e.g. cd skills
+      <span class="command"><white>ls</span> dir : List the content of directory 'dir' e.g. ls skills, ls education
       <span class="command"><white>joke</span> : Tell a random joke
       <span class="command"><white>clear</span> : Clear the screen
       <span class="command"><white>credits</span> : Display the used libraries
       <span class="command"><white>exit</span> : exit ? why ?
       <span class="command"><white>help</span> : Display this help menu
+      \nTab auto-completion is available.
       `);
+    term.exec("ls");
   },
   echo(...args) {
     if (args.length === 0) {
@@ -214,10 +216,10 @@ function ready() {
       ansi: true,
     })
     .echo(
-      '<glow><green><span class="job">Software Developer & Data Science enthousiast</span></green></glow>'
+      '\n<glow><green><span class="job">Software Developer Data Science enthousiast</span></green></glow>'
     )
     .echo(
-      "<green>\nWelcome to my Terminal Portfolio. Type help to get started.\n</green>"
+      "<green>\nWelcome to my Terminal Portfolio. Type <glow><white>help</white></glow> to get started.\n</green>"
     );
 }
 
