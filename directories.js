@@ -9,7 +9,7 @@ export const directories = {
   ],
   certifications: [
     "",
-    "<white>Certifications</white>",
+    "<white>Certifications (Click to verify)</white>",
     '* <a href="https://www.datacamp.com/certificate/DSA0019605927685" target="_blank"><yellow>Associate Data Scientist</yellow></a> - Datacamp',
     '* <a href="https://coursera.org/verify/SF24JFHH5H5Q" target="_blank"><yellow>Supervised Machine Learning</yellow></a> - Coursera',
     '* <a href="https://coursera.org/verify/PNK3EEPQSR4S" target="_blank"><yellow>Advanced Learning Algorithms</yellow></a> - Coursera',
@@ -20,7 +20,7 @@ export const directories = {
   ],
   projects: [
     "",
-    "<white>My Projects\n</white>",
+    "<white>My Projects (Click to see)\n</white>",
     [
       [
         "MuZic",
