@@ -216,7 +216,7 @@ function ready() {
       ansi: true,
     })
     .echo(
-      '\n<glow><green><span class="job">Software Developer Data Science enthousiast</span></green></glow>'
+      '\n<glow><green><span class="job">Software Developer and Data Scientist</span></green></glow>'
     )
     .echo(
       "<green>\nWelcome to my Terminal Portfolio. Type <glow><white>help</white></glow> to get started.\n</green>"

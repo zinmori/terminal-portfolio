@@ -1,4 +1,12 @@
 export const directories = {
+  experience: [
+    "",
+    "<white>Professional Experience</white>",
+
+    '* <yellow>Data Scientist</yellow> - <a href="https://www.linkedin.com/company/numeriquetg/" target="_blank">Ministry of the Digital Economy and Transformation</a> December 2024 - Present',
+    '* <yellow>Full Stack Developer</yellow> - <a href="https://www.linkedin.com/company/mitsiomotu/" target="_blank">Mitsio Motu</a> July 2024 - November 2024',
+    "",
+  ],
   education: [
     "",
     "<white>Education</white>",
@@ -10,18 +18,30 @@ export const directories = {
   certifications: [
     "",
     "<white>Certifications (Click to verify)</white>",
+    '* <a href="https://coursera.org/verify/specialization/2RUCU48RMPBY" target="_blank"><yellow>Machine Learning Specialization</yellow></a> - Coursera',
+    '* <a href="www.udacity.com/certificate/e/9d70472c-2dce-11ef-aa1f-d3a47e90255f" target="_blank"><yellow>AI Programming with Python Nanodegree</yellow></a> - Udacity',
     '* <a href="https://www.datacamp.com/certificate/DSA0019605927685" target="_blank"><yellow>Associate Data Scientist</yellow></a> - Datacamp',
-    '* <a href="https://coursera.org/verify/SF24JFHH5H5Q" target="_blank"><yellow>Supervised Machine Learning</yellow></a> - Coursera',
-    '* <a href="https://coursera.org/verify/PNK3EEPQSR4S" target="_blank"><yellow>Advanced Learning Algorithms</yellow></a> - Coursera',
-    '* <a href="https://www.udemy.com/certificate/UC-18077573-e617-42d6-8b7a-8f2d8d70a0cf/" target="_blank"><yellow>Flutter et Dart</yellow></a> - Udemy',
-    '* <a href="https://openclassrooms.com/fr/course-certificates/8609343030" target="_blank"><yellow>React JS</yellow></a> - Openclassrooms',
-    '* <a href="https://openclassrooms.com/fr/course-certificates/4249712619" target="_blank"><yellow>NodeJS/Express/MongoDB</yellow></a> - Openclassrooms',
     "",
   ],
   projects: [
     "",
     "<white>My Projects (Click to see)\n</white>",
     [
+      [
+        "Credit Card Approvals",
+        "https://www.datacamp.com/datalab/w/d42d9ccb-b97d-4fcb-a802-556f23ab3959/edit",
+        "A machine learning model to predict credit card approvals",
+      ],
+      [
+        "CO2 Emissions in Africa",
+        "https://www.datacamp.com/datalab/w/3fa278e9-7c61-4134-a1c9-c3604a9b87f0/edit",
+        "Study of CO2 emissions in Africa with and prediction of future emissions with machine learning models",
+      ],
+      [
+        "The Android app market on Google play",
+        "https://www.datacamp.com/datalab/w/e7057801-47eb-4ca8-b549-916dd6740ae3/edit",
+        "Analysis of the Android app market on Google play",
+      ],
       [
         "MuZic",
         "https://github.com/zinmori/muzic",
@@ -57,21 +77,6 @@ export const directories = {
         "https://investmentz.vercel.app/",
         "An investment Calculator app with React.js",
       ],
-      [
-        "Credit Card Approvals",
-        "https://www.datacamp.com/datalab/w/d42d9ccb-b97d-4fcb-a802-556f23ab3959/edit",
-        "A machine learning model to predict credit card approvals",
-      ],
-      [
-        "CO2 Emissions in Africa",
-        "https://www.datacamp.com/datalab/w/3fa278e9-7c61-4134-a1c9-c3604a9b87f0/edit",
-        "Study of CO2 emissions in Africa with and prediction of future emissions with machine learning models",
-      ],
-      [
-        "The Android app market on Google play",
-        "https://www.datacamp.com/datalab/w/e7057801-47eb-4ca8-b549-916dd6740ae3/edit",
-        "Analysis of the Android app market on Google play",
-      ],
     ].map(([name, url, description = ""]) => {
       return `* <a href="${url}" target="_blank">${name}</a> &mdash; <white>${description}</white>\n`;
     }),
@@ -95,16 +100,20 @@ export const directories = {
     "",
     "<white>Frameworks and Libraries</white>",
     [
+      "Pytorch",
+      "Tensorflow/Keras",
+      "Scikit-learn",
       "Flutter",
       "React.js",
       "Redux",
       "Express",
-      "Tensorflow/Keras",
-      "Scikit-learn",
+      "Django",
     ].map((lib) => `* <green>${lib}</green>`),
     "",
     "<white>Tools</white>",
-    ["Git", "Visual Studio Code"].map((lib) => `* <blue>${lib}</blue>`),
+    ["Git", "Visual Studio Code", "Docker"].map(
+      (lib) => `* <blue>${lib}</blue>`
+    ),
     "",
   ].flat(),
   links: [
