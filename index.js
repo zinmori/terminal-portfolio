@@ -5,7 +5,7 @@ import { rand } from "./utils.js";
 const fonts = ["ANSI Shadow", "Doom", "Standard", "Big", "Slant"];
 const jokeUrl = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw";
 const font = fonts[rand(4)];
-figlet.defaults({ fontPath: "https://unpkg.com/figlet/fonts/" });
+figlet.defaults({ fontPath: "" });
 figlet.preloadFonts([font], ready);
 
 const dirs = Object.keys(directories);
@@ -21,7 +21,7 @@ function prompt() {
 const commands = {
   about() {
     term
-      .echo('<img src="profil.png"/>')
+      .echo('<img src="moi_256.png" />')
       .echo("")
       .echo(
         `<glow><white>Hi, I'm Ezechiel Kokou AGBAN (but you can call me BigZ😎). 
@@ -208,7 +208,22 @@ function render(text) {
   });
 }
 
-function ready() {
+async function ready() {
+  term.clear();
+  term.css("background-color", "#00001C");
+  await term.echo("<glow><green>Booting BigZOS 1.0...</green></glow>", {
+    delay: 50,
+    typing: true,
+  });
+  await term.echo("<glow><green>Loading modules...</green></glow>", {
+    delay: 50,
+    typing: true,
+  });
+  await term.echo("<glow><green>Starting services...\n</green></glow>", {
+    delay: 50,
+    typing: true,
+  });
+  term.clear();
   const seed = rand(256);
   term
     .css("background-color", "#00001C")
@@ -220,7 +235,8 @@ function ready() {
     )
     .echo(
       "<green>\nWelcome to my Terminal Portfolio. Type <glow><white>help</white></glow> to get started.\n</green>"
-    );
+    )
+    .exec("help");
 }
 
 term.on("click", ".command", function () {

@@ -1,37 +1,36 @@
 :root {
-    --size: 1.3;
+  --size: 1.3;
 }
 
 .job {
-    --size: 2;
-
+  --size: 2;
 }
 
 @media (max-width: 768px) {
-    :root {
-        --size: 1.3;
-    }
+  :root {
+    --size: 1.3;
+  }
 
-    .job {
-        --size: 1.5;
-    }
+  .job {
+    --size: 1.5;
+  }
 }
 
 @media (max-width: 480px) {
-    :root {
-        --size: 0.8;
-    }
+  :root {
+    --size: 0.8;
+  }
 
-    .job {
-        --size: 0.8;
-    }
+  .job {
+    --size: 0.8;
+  }
 }
 
 .command,
 .directory {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
